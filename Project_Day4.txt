@@ -1,0 +1,41 @@
+pragma solidity ^0.4.17;
+
+contract Student{
+    
+    string public Name;
+    uint public RollNO; 
+    string public Batch;
+    uint public EngMarks;
+    uint public MathsMarks;   
+    uint public GeoMarks;   
+    uint public HisMarks;
+    string public Status;
+    
+    function Student(string newName, uint newRollNO, string newBatch, uint newEngMarks, uint newMathsMarks, uint newGeoMarks, uint newHisMarks, string newStatus )public{
+        Name = newName;
+        RollNO = newRollNO;
+        Batch = newBatch; 
+        EngMarks = newEngMarks;
+        MathsMarks = newMathsMarks;
+        GeoMarks = newGeoMarks;
+        HisMarks = newHisMarks;
+        Status = newStatus;
+        
+    }
+    
+    function setDetails(string newName, uint newRollNO, string newBatch, uint newEngMarks, uint newMathsMarks, uint newGeoMarks, uint newHisMarks, string newStatus)public{
+        Name = newName;
+        RollNO = newRollNO;
+        Batch = newBatch; 
+        EngMarks = newEngMarks;
+        MathsMarks = newMathsMarks;
+        GeoMarks = newGeoMarks;
+        HisMarks = newHisMarks;
+        Status = newStatus;
+    }
+    
+    function getDetails()public view returns(string, uint, string, uint, uint, uint, uint, string){
+        
+        return(Name, RollNO, Batch, EngMarks, MathsMarks, GeoMarks, HisMarks, Status);
+    }
+}
